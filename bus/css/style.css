@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "SF Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/SF-Pro.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/BeVietnamPro.ttf) format("truetype");
+  }
+
+  body {
+    @apply text-white bg-t1-motion-blue m-0 text-7xl p-0;
+  }
+
+  html, body {
+    @apply overflow-x-hidden;
+  }
+
+  button {
+    @apply button;
+  }
+}
+
+@layer utilities {
+  .absolute-horz-center {
+    @apply absolute left-1/2 -translate-x-1/2;
+  }
+
+  .absolute-vert-center {
+    @apply absolute top-1/2 -translate-y-1/2;
+  }
+
+  .absolute-center {
+    @apply absolute-horz-center absolute-vert-center;
+  }
+
+  .button {
+    @apply bg-t1-motion-dark-blue rounded-lg active:brightness-105 flex justify-center place-items-center;
+  }
+
+  .text-small {
+    @apply text-lg font-['Be_Vietnam_Pro'];
+  }
+}
